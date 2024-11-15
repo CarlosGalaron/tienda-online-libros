@@ -3,6 +3,7 @@ import HeaderHomepage from '../../componentes/Header/HeaderHomepage';
 import Footer from '../../componentes/Footer/Footer';
 import './Homepage.css';
 
+
 function Homepage() {
   useEffect(() => {
     const book = document.querySelector('.flying-book');
