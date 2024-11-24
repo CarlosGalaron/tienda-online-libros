@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import HeaderHomepage from '../../componentes/Header/HeaderHomepage';
-import Footer from '../../componentes/Footer/Footer';
-import './Homepage.css';
-
+import React, { useEffect } from "react";
+import HeaderHomepage from "../../componentes/Header/HeaderHomepage";
+import Footer from "../../componentes/Footer/Footer";
+import "./Homepage.css";
 
 function Homepage() {
   useEffect(() => {
-    const book = document.querySelector('.flying-book');
-    const body = document.querySelector('.homepage-body');
+    const book = document.querySelector(".flying-book");
+    const body = document.querySelector(".homepage-body");
 
     function randomPosition() {
       if (book && body) {
