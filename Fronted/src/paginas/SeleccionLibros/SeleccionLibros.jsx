@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './SeleccionLibros.css';
 import HeaderHomepage from '../../componentes/Header/HeaderHomepage';
+import Header from '../../componentes/Header/Header';
 import SearchBar from '../../componentes/SearchBar/SearchBar';
 
 const ImageGrid = () => {
@@ -131,9 +132,10 @@ useEffect(() => {
 };
 
 const Seleccion = () => {
+  const isLoggedIn = sessionStorage.getItem('idUsuario');
   return (
     <div>
-      <HeaderHomepage />
+      {isLoggedIn ? <Header /> : <HeaderHomepage />}
       <ImageGrid />
     </div>
   );

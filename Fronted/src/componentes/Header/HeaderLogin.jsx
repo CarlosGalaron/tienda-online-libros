@@ -9,7 +9,7 @@ function HeaderLogin() {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/registro'); // Define la ruta a la vista de login
+    navigate('/registro'); 
   };
 
   return (
