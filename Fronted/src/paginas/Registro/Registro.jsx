@@ -1,8 +1,13 @@
-//Registro.jsx
+import React, { useEffect } from 'react';
 
-import React from 'react'
 
 function Registro() {
+  useEffect(() => {
+    if (sessionStorage.getItem('idUsuario')) {
+        window.location.href = '/';
+    }
+}, []); 
+
   return (
     <div>Registro</div>
   )
