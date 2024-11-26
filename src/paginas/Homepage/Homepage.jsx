@@ -26,6 +26,7 @@ function Homepage() {
     randomPosition();
   }, []);
 
+
   return (
     <div className="homepage-father">
       <HeaderHomepage />
