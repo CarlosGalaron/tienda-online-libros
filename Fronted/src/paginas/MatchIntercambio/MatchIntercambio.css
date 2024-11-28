@@ -1,0 +1,99 @@
+/* Contenedor principal */
+.intercambio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00bfa5; /* Color de fondo */
+}
+
+/* Título */
+.intercambio-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 100px;
+}
+
+/* Contenedor de contenido */
+.intercambio-content {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/* Tarjeta grande */
+.main-book-card {
+  background-color: #00796b;
+  color: white;
+  border-radius: 10px;
+  width: 290px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+  background-color: #004d40;
+  border-radius: 5px;
+  height: 330px;
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+/* Lista de elementos */
+.book-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00796b;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-item .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-item .book-title {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+/* Botones */
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.accept {
+  background-color: #4caf50;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
