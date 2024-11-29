@@ -14,19 +14,20 @@ function Header() {
     <div className="header-container">
       <div className="header-icon_container"></div>
       <button className="header-button" onClick={() => navigate('/Seleccion')}>
-        BIBLIOTECA
+        CATALOGO
       </button>
       <button className="header-button" onClick={() => navigate('/intercambio')}>
         INTERCAMBIO
       </button>
-      <button className="header-button" onClick={() => navigate('/tienda')}>
-        TIENDA
+      <button className="header-button" onClick={() => navigate('/biblioteca')}>
+        Usuario
       </button>
       <button className="header-button" onClick={() => navigate('/publicaciones')}>
         PUBLICACIONES
       </button>
-      <button className="header-button" onClick={() => navigate('/audiolibros')}>
-        AUDIOLIBROS
+      
+      <button className="header-button" onClick={() => navigate('/tienda')}>
+        CESTA
       </button>
       {/*Cerrar sesion*/}
       <button className="header-button logout-button" onClick={handleLogout}>

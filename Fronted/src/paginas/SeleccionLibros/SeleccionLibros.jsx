@@ -15,7 +15,7 @@ const ImageGrid = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('/json/LibrosJson.json');
+        const response = await fetch('/json/LibrosJson.js');
         if (!response.ok) {
           throw new Error('Error al cargar el JSON');
         }
@@ -54,7 +54,7 @@ const ImageGrid = () => {
 
   const addToDemandas = () => {
     if (selectedBook) {
-      if (!demandas.includes(selectedBook.nombre)) {
+      if (!demandas.includes(selectedBook)) {
         setDemandas((prevDemandas) => [...prevDemandas, selectedBook.nombre]);
       }
     }
