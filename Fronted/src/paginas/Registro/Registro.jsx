@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'; 
+import Header from '../../componentes/Header/Header';
 
 
 function Registro() {
@@ -9,7 +10,7 @@ function Registro() {
 }, []); 
 
   return (
-    <div>Registro</div>
+    <><Header /><div>Registro</div></>
   )
 }
 
