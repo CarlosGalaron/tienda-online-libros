@@ -13,14 +13,14 @@ function Login() {
 
     useEffect(() => {
         if (sessionStorage.getItem('idUsuario')) {
-            window.location.href = '/';
+            window.location.href = '/Seleccion';
         }
     }, []); 
 
     const handleLogin = () => {
         if (username === 'usuario' && password === '1234') {
             sessionStorage.setItem('idUsuario', username); 
-            navigate('/'); 
+            navigate('/Seleccion'); 
         } else {
             setErrorMessage('Usuario o contraseña incorrectos');
         }
