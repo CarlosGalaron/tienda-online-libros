@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import HeaderLogin from '../../componentes/Header/HeaderLogin';
+import Header from '../../componentes/Header/Header';
 import Footer from '../../componentes/Footer/Footer';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
@@ -32,7 +32,7 @@ function Login() {
 
     return (
         <div className="login-father">
-            <HeaderLogin />
+            <Header />
             <div className="login-body">
                 <div className="login-container">
                     <h1 className="login-title">LOG IN</h1>

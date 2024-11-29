@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
-import HeaderHomepage from '../../componentes/Header/HeaderHomepage';
 import Header from '../../componentes/Header/Header';
 import Footer from '../../componentes/Footer/Footer';
 import './Homepage.css';
 
 
 function Homepage() {
-  const isLoggedIn = sessionStorage.getItem('idUsuario'); 
   useEffect(() => {
     const book = document.querySelector('.flying-book');
     const body = document.querySelector('.homepage-body');
@@ -30,7 +28,7 @@ function Homepage() {
 
   return (
     <div className="homepage-father">
-      {isLoggedIn ? <Header /> : <HeaderHomepage />}
+    <Header /> 
       <div className="homepage-body">
         <div className="flying-book"></div>
       </div>

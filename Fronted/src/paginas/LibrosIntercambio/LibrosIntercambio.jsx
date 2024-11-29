@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HeaderHomepage from "../../componentes/Header/HeaderHomepage";
+import Header from "../../componentes/Header/Header";
 import Footer from "../../componentes/Footer/Footer";
 import "./LibrosIntercambio.css";
 
@@ -65,7 +65,7 @@ function LibrosIntercambio() {
 
   return (
     <div className="libros-intercambio">
-      <HeaderHomepage />
+      <Header />
 
       <main className="libros-contenedor">
         {/* Sección Librería */}
