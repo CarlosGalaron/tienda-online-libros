@@ -14,7 +14,7 @@ const ImageGrid = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('/json/LibrosJson.js');
+        const response = await fetch('/json/LibrosJson.json');
         if (!response.ok) {
           throw new Error('Error al cargar el JSON');
         }

@@ -38,10 +38,9 @@ function Header() {
       {isLoggedIn ? (
         <>
           {/* Si está logueado, mostrar las opciones de navegación */}
-          <button className="header-button" onClick={() => navigate('/Seleccion')}>CATÁLOGO</button>
-          <button className="header-button" onClick={() => navigate('/intercambio')}>INTERCAMBIO</button>
+          <button className="header-button" onClick={() => navigate('/Catalogo')}>Tienda</button>
+          <button className="header-button" onClick={() => navigate('/Seleccion')}>Seleccion de libros</button>
           <button className="header-button" onClick={() => navigate('/biblioteca')}>Usuario</button>
-          <button className="header-button" onClick={() => navigate('/publicaciones')}>PUBLICACIONES</button>
           <button className="header-button" onClick={() => navigate('/tienda')}>CESTA</button>
           {/* Botón de cerrar sesión */}
           <button className="header-button logout-button" onClick={handleLogout}>CERRAR SESIÓN</button>
