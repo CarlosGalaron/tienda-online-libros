@@ -2,7 +2,6 @@
     width: 100vw;
     height: 10vh;
     background-color: rgb(55, 94, 201);
-    border: 2px solid darkblue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
