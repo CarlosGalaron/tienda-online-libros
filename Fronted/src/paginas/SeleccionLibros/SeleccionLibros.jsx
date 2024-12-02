@@ -12,6 +12,11 @@ const ImageGrid = () => {
   const [demandas, setDemandas] = useState([]);
 
   useEffect(() => {
+
+    if (!sessionStorage.getItem('idUsuario')) {
+      window.location.href = '/login';
+  } 
+    
     const fetchImages = async () => {
       try {
         const response = await fetch('/json/LibrosJson.json');

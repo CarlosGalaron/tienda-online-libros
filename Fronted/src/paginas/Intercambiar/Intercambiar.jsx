@@ -13,6 +13,11 @@ function Intercambio() {
   const [isMatch, setIsMatch] = useState(false);
 
   useEffect(() => {
+
+    if (!sessionStorage.getItem('idUsuario')) {
+      window.location.href = '/login';
+  } 
+
     const fetchLibros = async () => {
       try {
         // Cargar usuario1.json, usuario2.json y LibrosJson.json

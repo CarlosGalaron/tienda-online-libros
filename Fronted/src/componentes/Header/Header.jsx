@@ -30,10 +30,16 @@ function Header() {
     navigate('/registro'); // Ir a la vista de registro
   };
 
+  const handleLogoClick = () => {
+    navigate('/catalogo'); 
+  };
+
   return (
     <div className="header-container">
       {/* Logo o icono común */}
-      <div className="header-icon_container">LOGO</div>
+      <button onClick={handleLogoClick} className="header-icon_button">
+        <img src='/LogoClaro.png' alt='logo' className="header-icon_container" />
+      </button>
 
       {isLoggedIn ? (
         <>
@@ -49,7 +55,6 @@ function Header() {
         <>
           {/* Si no está logueado, mostrar un botón de "Login" o "Sign In" */}
           <div className="headerH-container">
-            <div className="wellcome-title">BIENVENIDO A KDLIBROS</div>
             <div className="navigate-login-button" onClick={handleLoginClick}>LOG IN</div>
             <div className="navigate-login-button" onClick={handleSignUpClick}>SIGN IN</div>
           </div>

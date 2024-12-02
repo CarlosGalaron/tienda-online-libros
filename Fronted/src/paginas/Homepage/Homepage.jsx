@@ -34,6 +34,13 @@ function Homepage() {
     <Header /> 
       <div className="homepage-body">
         <div className="flying-book"></div>
+        <div className='texto'>
+          <h1>Bienvenido a KDLIBROS, </h1>
+          <br/>tu espacio ideal para el intercambio y compra de libros. 
+          <br/>Conecta con otros lectores, intercambia tus libros favoritos o adquiere nuevos títulos a precios accesibles.
+          <br/>Nuestra plataforma es el lugar perfecto para compartir la pasión por la lectura y enriquecer tu biblioteca personal. 
+          <br/>¡Únete hoy y comienza a disfrutar de nuevas aventuras literarias!
+           </div>
       </div>
       <Footer />
     </div>

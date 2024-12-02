@@ -4,6 +4,10 @@ import Footer from '../../componentes/Footer/Footer';
 import './Catalogo.css';
 
 function Catalogo() {
+
+  if (!sessionStorage.getItem('idUsuario')) {
+    window.location.href = '/login';
+} 
   const isLoggedIn = sessionStorage.getItem('idUsuario');
 
   const [images, setImages] = useState([]);

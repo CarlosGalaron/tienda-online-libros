@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../componentes/Header/Header';
 import Footer from '../../componentes/Footer/Footer';
 import './Registro.css';
@@ -12,6 +12,12 @@ const Register = () => {
   const [errors, setErrors] = useState({
     correo: ''
   });
+
+  useEffect(() => {
+    if (sessionStorage.getItem('idUsuario')) {
+        window.location.href = '/Catalogo';
+    }
+}, []); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
