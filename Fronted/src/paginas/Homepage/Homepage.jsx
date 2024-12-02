@@ -5,7 +5,10 @@ import './Homepage.css';
 
 
 function Homepage() {
-  useEffect(() => {
+  useEffect(() => { 
+        if (sessionStorage.getItem('idUsuario')) {
+            window.location.href = '/Catalogo';
+        } 
     const book = document.querySelector('.flying-book');
     const body = document.querySelector('.homepage-body');
 
