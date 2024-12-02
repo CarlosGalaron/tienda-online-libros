@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Evita el scroll en toda la página */
+/* html, body {
+  height: 100%;
+  overflow: hidden; 
+} */
