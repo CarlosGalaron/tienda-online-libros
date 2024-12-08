@@ -78,26 +78,9 @@ function Catalogo() {
   return (
     <div className="Catalogo-father">
       <Header />
-      {isCartVisible && (
-        <div className="cart-box">
-          <h3>Cesta</h3>
-          {cartBooks.length === 0 ? (
-            <p>No hay libros en la cesta.</p>
-          ) : (
-            <ul>
-              {cartBooks.map((book, index) => (
-                <li key={index}>{book.nombre}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
       <div className="Catalogo-body">
         <div className="catalog-header">
           <h1>Catálogo de libros a la venta</h1>
-          <button className="toggle-cart-button" onClick={toggleCartVisibility}>
-            {isCartVisible ? 'Ocultar Cesta' : 'Mostrar Cesta'}
-          </button>
         </div>
         {isLoading ? (
           <p>Cargando imágenes...</p>
