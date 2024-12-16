@@ -125,7 +125,10 @@ function Catalogo() {
                 <p><strong>ISBN:</strong> {selectedBook.ISBN}</p>
               </div>
               <div className="modal-buttons">
-                <button onClick={() => handleAddToCart(selectedBook)}>
+                <button onClick={() =>  { 
+                    handleAddToCart(selectedBook); 
+                    closeModal(); 
+                }}>
                   Añadir a cesta
                 </button>
               </div>
