@@ -4,10 +4,6 @@ import Footer from '../../componentes/Footer/Footer';
 import './Catalogo.css';
 
 function Catalogo() {
-
-  if (!sessionStorage.getItem('idUsuario')) {
-    window.location.href = '/login';
-} 
   const isLoggedIn = sessionStorage.getItem('idUsuario');
 
   const [images, setImages] = useState([]);
@@ -55,15 +51,10 @@ function Catalogo() {
   };
 
   const handleAddToCart = (book) => {
-    // Recupera la lista actual de libros en la cesta desde localStorage
     const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Verifica si el libro ya está en la cesta (basado en ISBN)
-    if (!currentCart.some(item => item.ISBN === book.ISBN)) {
-      const updatedCart = [...currentCart, book];
-      localStorage.setItem('cart', JSON.stringify(updatedCart)); // Guarda el carrito actualizado en localStorage
-      setCartBooks(updatedCart); // Actualiza el estado local de la cesta
-    }
+    const updatedCart = [...currentCart, book];
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setCartBooks(updatedCart); 
   };
 
   const toggleCartVisibility = () => {
@@ -78,14 +69,31 @@ function Catalogo() {
   return (
     <div className="Catalogo-father">
       <Header />
+      {isCartVisible && (
+        <div className="cart-box">
+          <h3>Cesta</h3>
+          {cartBooks.length === 0 ? (
+            <p>No hay libros en la cesta.</p>
+          ) : (
+            <ul>
+              {cartBooks.map((book, index) => (
+                <li key={index}>{book.nombre}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
       <div className="Catalogo-body">
-        <div className="catalog-header">
-          <h1>Catálogo de libros a la venta</h1>
+      <div className="catalog-header">
+          <button className="toggle-cart-button" onClick={toggleCartVisibility}>
+            {isCartVisible ? 'Ocultar Cesta' : 'Mostrar Cesta'}
+          </button>
         </div>
         {isLoading ? (
           <p>Cargando imágenes...</p>
         ) : (
           <div className="image-grid">
+            
             {rows.map((row, rowIndex) => (
               <div key={rowIndex} className="row">
                 {row.map((image, index) => (

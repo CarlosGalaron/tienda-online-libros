@@ -7,6 +7,8 @@
     align-items: stretch;
 }
 
+
+
 .Catalogo-body {
     width: 100vw;
     height: 80vh;
@@ -66,7 +68,9 @@ h1 {
         transform: translateX(-50%) rotate(180deg);
     }
 }
-
+.image-grid::-webkit-scrollbar{
+    margin: 1px;
+}
 .image-grid {
     display: flex;
     flex-direction: column;
@@ -215,7 +219,8 @@ h1 {
 }
 
 .toggle-cart-button {
-    margin-right: 40px;
+    float: right;
+    margin-left: 55%;
     padding: 10px 10px;
     font-size: 1rem;
     color: white;
